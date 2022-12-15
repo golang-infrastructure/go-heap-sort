@@ -27,6 +27,26 @@ func main() {
 }
 ```
 
+# 三、API
+
+对元素类型为可比较类型的切片进行正序排序
+
+```go
+func Sort[T gtypes.Ordered](slice []T)
+```
+
+对元素类型为可比较类型的切片进行逆向排序
+
+```go
+func ReverseSort[T gtypes.Ordered](slice []T) 
+```
+
+使用自定义的比较器对切片进行排序，如果需要逆序可以自行控制比较器的比较规则
+
+```go
+func SortByComparator[T any](slice []T, comparator compare_anything.Comparator[T])
+```
+
 
 
 
